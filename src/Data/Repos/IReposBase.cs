@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 
 namespace Data.Repos
 {
@@ -12,13 +12,13 @@ namespace Data.Repos
         {
             get;
         }
-        TTable GetItemById(Guid id); //read
+        Task<TTable> GetItemByIdAsync(Guid id); //read
 
-        int Update(TTable table);    //update
+        Task UpdateAsync(TTable table);    //update
 
        
 
-        int Delete(TTable table);     //delete
+        Task DeleteAsync(TTable table);     //delete
 
 
 
