@@ -12,11 +12,11 @@ namespace DataProviders.EntityFrameworkProviders.Core.Repos
 {
     public class EFHistory : IHistoryRepos
     {
-        protected DataBaseContext Context
+        protected DatabaseContext Context
         {
             get;
         }
-        protected EFHistory(DataBaseContext context) => Context = context;
+        protected EFHistory(DatabaseContext context) => Context = context;
         public IQueryable<History> Items => Context.Histories;
 
         public async Task DeleteAsync(History history)

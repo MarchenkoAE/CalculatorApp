@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataProviders.Entity_Framework_Providers.Core
 {
-    public abstract class DataBaseContext: DbContext
+    public abstract class DatabaseContext: DbContext
     {
-        protected DataBaseContext()
-        {
+        protected DatabaseContext()
+        { 
             Database.EnsureCreated();
         }
         public DbSet<User> Users

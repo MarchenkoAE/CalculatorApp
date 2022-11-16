@@ -13,11 +13,11 @@ namespace DataProviders.EntityFrameworkProviders.Core.Repos
     public abstract class EFUsers : IUserRepos
 
     {  
-        protected DataBaseContext Context
+        protected DatabaseContext Context
         {
             get;
         }
-        protected EFUsers(DataBaseContext context) => Context = context;
+        protected EFUsers(DatabaseContext context) => Context = context;
         public IQueryable<User> Items => Context.Users;
 
         public Task<User> GetItemByIdAsync(Guid id)
