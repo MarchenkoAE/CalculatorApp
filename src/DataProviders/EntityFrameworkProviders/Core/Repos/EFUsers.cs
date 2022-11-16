@@ -34,6 +34,10 @@ namespace DataProviders.EntityFrameworkProviders.Core.Repos
             }
             await Context.SaveChangesAsync();
         }
-        public Task DeleteAsync(User user);
+        public async Task DeleteAsync(User user)
+        {
+            Context.Users.Remove(user);
+            await Context.SaveChangesAsync();
+        }
     }
 }

@@ -15,24 +15,13 @@ namespace Data.Entities
         {
             get;
             set;
-        }
+        } = null!;
 
         public string Password
         {
             get;
             set;
-        }
-        public string Email
-        {
-            get;
-            set;
-        }
-
-        public bool IsConfirmed
-        {
-            get;
-            set;
-        }
+        } = null!;
 
         public IList<History> Histories
         {
@@ -40,7 +29,6 @@ namespace Data.Entities
 
             set;
         } = new List<History>();
-
 
     }
 

@@ -13,18 +13,39 @@ namespace Data.Entities
 
             set;
         }
-        public Calculations Calculations
+        public string FirstOperand
+        {
+            get;
+
+            set;
+        } = null!;
+        public string? SecondOperand
         {
             get;
 
             set;
         }
+
+        public string Operation
+        {
+            get;
+
+            set;
+        } = null!;
+
+        public string Result
+        {
+            get;
+
+            set;
+        } = null!;
+
         public DateTime DateTime
         {
             get;
 
             set;
-        }
+        } = DateTime.UtcNow;
 
         public Guid UserId
         {
@@ -38,7 +59,7 @@ namespace Data.Entities
             get;
 
             set;
-        } 
+        } = null!;
     }
 
    
