@@ -1,11 +1,11 @@
-﻿using Data.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Data.Model;
 
 namespace Data.Entities
 {
-    public class History
+    public class Seat
     {
         public Guid Id
         {
@@ -13,51 +13,41 @@ namespace Data.Entities
 
             set;
         }
- 
 
-        public Guid TicketId
+     public string Status
         {
             get;
 
             set;
-        } 
-
-        public string Action
+        } = null!;
+        public string Type
         {
             get;
 
             set;
         } = null!;
 
-        public DateTime DateTime
+        public string Price
         {
             get;
 
             set;
-        } = DateTime.UtcNow;
+        } = null!;
 
-        public Guid UserId
+
+
+        public Guid TimetableId
         {
             get;
 
             set;
         }
 
-        public User User
-        {
-            get;
-
-            set;
-        } = null!;
-
-        public Ticket Ticket
+        public Timetable Timetable
         {
             get;
 
             set;
         } = null!;
     }
-
-   
-
 }
