@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Data.Model;
 
 namespace Data.Entities
 {
@@ -14,7 +11,7 @@ namespace Data.Entities
             set;
         }
 
-     public string Status
+        public string Status
         {
             get;
 
@@ -44,6 +41,13 @@ namespace Data.Entities
         }
 
         public Timetable Timetable
+        {
+            get;
+
+            set;
+        } = null!;
+
+        public Ticket Ticket
         {
             get;
 

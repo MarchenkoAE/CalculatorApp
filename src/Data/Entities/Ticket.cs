@@ -1,61 +1,58 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Data.Model;
 
 namespace Data.Entities
 {
     public class Ticket
     {
-      
-            public Guid Id
-            {
-                get;
 
-                set;
-            }
+        public Guid Id
+        {
+            get;
+
+            set;
+        }
 
 
-            public Guid MovieId
-            {
-                get;
+        public Guid MovieId
+        {
+            get;
 
-                set;
-            }
-            public Guid RoomId
-            {
-                get;
+            set;
+        }
+        public Guid RoomId
+        {
+            get;
 
-                set;
-            }
+            set;
+        }
 
-            public Guid CinemaId
-            {
-                get;
+        public Guid CinemaId
+        {
+            get;
 
-                set;
-            }
+            set;
+        }
 
-            public DateTime DateTime
-            {
-                get;
+        public DateTime DateTime
+        {
+            get;
 
-                set;
-            } = DateTime.UtcNow;
+            set;
+        } = DateTime.UtcNow;
 
-            public Guid SeatId
-            {
-                get;
+        public Guid SeatId
+        {
+            get;
 
-                set;
-            }
+            set;
+        }
 
-            public string Price
-            {
-                get;
+        public string Price
+        {
+            get;
 
-                set;
-            } = null!;
+            set;
+        } = null!;
 
 
         public Movie Movie
@@ -84,7 +81,12 @@ namespace Data.Entities
 
             set;
         } = null!;
+        public History History
+        {
+            get;
 
+            set;
+        } = null!;
 
     }
 }

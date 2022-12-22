@@ -1,8 +1,5 @@
 ﻿using DataProviders.Entity_Framework_Providers.Core;
 using DataProviders.EntityFrameworkProviders.Core.Repos;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DataProviders.EntityFrameworkProviders.SqLite
 {

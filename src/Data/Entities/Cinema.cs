@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Data.Model;
 
 
 namespace Data.Entities
@@ -30,6 +27,17 @@ namespace Data.Entities
             set;
         } = null!;
 
+        public Room Room
+        {
+            get;
 
+            set;
+        } = null!;
+        public Ticket Ticket
+        {
+            get;
+
+            set;
+        } = null!;
     }
 }

@@ -1,9 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
-using DataProviders.EntityFrameworkProviders.SqLite;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DataProviders.EntityFrameworkProviders.SqLite.Tests
 {

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Data.Model;
 
 
 
@@ -37,6 +34,18 @@ namespace Data.Entities
 
             set;
         }
+        public Timetable Timetable
+        {
+            get;
+
+            set;
+        } = null!;
+        public Ticket Ticket
+        {
+            get;
+
+            set;
+        } = null!;
 
     }
 }

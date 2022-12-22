@@ -1,7 +1,4 @@
-﻿using Data.Model;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace Data.Entities
 {
@@ -13,14 +10,14 @@ namespace Data.Entities
 
             set;
         }
- 
+
 
         public Guid TicketId
         {
             get;
 
             set;
-        } 
+        }
 
         public string Action
         {
@@ -58,6 +55,6 @@ namespace Data.Entities
         } = null!;
     }
 
-   
+
 
 }

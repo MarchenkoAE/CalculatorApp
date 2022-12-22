@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Data.Entities
 {
     public class User
     {
         public Guid Id
-            { get;
+        {
+            get;
 
-              set;
-            }
+            set;
+        }
         public string Login
         {
             get;
