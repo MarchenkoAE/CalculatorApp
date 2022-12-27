@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DTL800x240.jpg" />
+    <None Remove="Ennio_artwork_800x240.jpg" />
+    <None Remove="sct-logo.jpg" />
+    <None Remove="TheVelvetQueen_800x240.jpg" />
+    <None Remove="Triangle of Sadness -800x240.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ViewModel\ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="DTL800x240.jpg" />
+    <Resource Include="Ennio_artwork_800x240.jpg" />
+    <Resource Include="sct-logo.jpg" />
+    <Resource Include="TheVelvetQueen_800x240.jpg" />
+    <Resource Include="Triangle of Sadness -800x240.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="LogIn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="App.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="LogIn.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+
+</Project>
