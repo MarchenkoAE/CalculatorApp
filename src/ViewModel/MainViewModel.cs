@@ -14,6 +14,8 @@ namespace ViewModels
         private string display = "";
         private readonly string comma = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator.ToString();
         public string Comma => comma;
+        public string Login = "";
+        public string Password = "";
 
 
         public string Display {

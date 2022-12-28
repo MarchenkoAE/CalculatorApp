@@ -5,18 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:View"
         mc:Ignorable="d"
-        Title="" Height="600" Width="800" BorderBrush="{Binding ElementName=border, Mode=OneWay}" FontFamily="Yu Gothic Medium" WindowStyle="SingleBorderWindow">
+        Title="Star Theatre" Height="620" Width="800" BorderBrush="{Binding ElementName=border, Mode=OneWay}" FontFamily="Malgun Gothic" WindowStyle="SingleBorderWindow" Icon="/picture.ico" FontSize="22" FontWeight="Bold" Topmost="True">
     <Border x:Name="MainBorder" BorderBrush="#FFFFE791" BorderThickness="1" Padding="10,10,10,10">
         <Grid x:Name="MainGrid">
-            <Menu x:Name="MainMenu" Background="#FFA1362A" Margin="11,11,547,10">
-                <Image x:Name="logo" Source="/sct-logo.jpg" Height="200" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="374*"/>
+            </Grid.ColumnDefinitions>
+            <Menu x:Name="MainMenu" Background="#FFA1362A" Margin="11,11,547,10" Grid.ColumnSpan="2">
+                <Image x:Name="logo" Source="/sct-logo.jpg" Height="200" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False" IsHitTestVisible="False"/>
                 <MenuItem x:Name="MenuItem1" Header="ACCOUNT" Height="65" Width="220" Margin="0,10,0,0" Cursor="Hand" FontFamily="Malgun Gothic" FontStyle="Normal" FontWeight="Normal" FontSize="24" HorizontalContentAlignment="Center" UseLayoutRounding="True"/>
                 <MenuItem x:Name="MenuItem2" Header="HISTORY" Height="65" Width="220" Cursor="Hand" FontFamily="Malgun Gothic" FontStyle="Normal" FontWeight="Normal" FontSize="24" HorizontalContentAlignment="Center" UseLayoutRounding="True"/>
                 <MenuItem x:Name="MenuItem3" Header="TICKETS" Height="65" Width="220" Cursor="Hand" FontFamily="Malgun Gothic" FontStyle="Normal" FontWeight="Normal" FontSize="24" HorizontalContentAlignment="Center" UseLayoutRounding="True"/>
                 <MenuItem x:Name="MenuItem4" Header="MOVIES" Height="65" Width="220" Cursor="Hand" FontFamily="Malgun Gothic" FontStyle="Normal" FontWeight="Normal" FontSize="24" HorizontalContentAlignment="Center" UseLayoutRounding="True"/>
                 <MenuItem x:Name="MenuItem5" Header="VENUES" Height="65" Width="220" Cursor="Hand" FontFamily="Malgun Gothic" FontStyle="Normal" FontWeight="Normal" FontSize="24" HorizontalContentAlignment="Center" UseLayoutRounding="True"/>
             </Menu>
-            <Border x:Name="SubBorder" BorderThickness="1" Padding="5,5,5,5" Margin="236,10,10,11">
+            <Border x:Name="SubBorder" BorderThickness="1" Padding="5,5,5,5" Margin="206,10,10,11" Grid.Column="1">
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF323F21"/>
@@ -24,23 +28,24 @@
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
-            <Grid x:Name="SubGridAccountFalse" Margin="236,11,10,10" Width="400" Height="500" Grid.Row="8" d:IsHidden="True">
+            <Grid x:Name="SubGridAccountFalse" Margin="272,32,76,30" Width="400" Height="500" Grid.Column="1">
                 <Label x:Name="LoginCaption" Content="Login" Width="300" Height="50" Margin="0,80,0,370" FontFamily="Malgun Gothic Semilight" FontSize="22" FontWeight="SemiBold" FontStretch="Normal" HorizontalContentAlignment="Center"/>
-                <TextBlock x:Name="LoginInput" TextWrapping="Wrap" Height="50" Margin="0,169,0,281" FontSize="22" FontFamily="Malgun Gothic" HorizontalAlignment="Center" Cursor="IBeam" Width="300" Background="#FF747D68"/>
-                <Label x:Name="PasswordCaption" Content="Password" Width="300" Height="50" Margin="0,275,0,175" FontFamily="Malgun Gothic Semilight" FontSize="22" FontWeight="SemiBold" FontStretch="Normal" HorizontalContentAlignment="Center"/>
-                <PasswordBox x:Name="PasswordInput" Width="300" Background="#FFB6BBB0" Height="50" Margin="50,357,50,93" BorderBrush="{x:Null}"/>
-                <Button x:Name="SigninButton" Content="Sign in" Width="100" Height="54" BorderBrush="{x:Null}" Foreground="#FF4A3C2B" FontSize="22" FontFamily="Malgun Gothic" FontWeight="Bold" Margin="30,446,170,0" Background="#FFFEE99A"/>
-                <Button x:Name="RegisterButton" Content="Register" Width="100" Height="54" BorderBrush="{x:Null}" Background="#FFFEE99A" Foreground="#FF4A3C2B" FontSize="22" FontFamily="Malgun Gothic" FontWeight="Bold" Margin="200,446,100,0"/>
+                <TextBlock x:Name="LoginInput" TextWrapping="Wrap" Height="50" Margin="0,169,0,281" FontSize="22" FontFamily="Malgun Gothic" HorizontalAlignment="Center" Cursor="IBeam" Width="300" Background="#FF747D68" Text="{Binding Path=Login, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}"/>
+                <Label x:Name="PasswordCaption" Content="Password" Width="300" Height="50" Margin="0,275,0,175" FontFamily="Malgun Gothic Semilight" FontSize="22" FontWeight="SemiBold" FontStretch="Normal" HorizontalContentAlignment="Center" />
+                <PasswordBox x:Name="PasswordInput" Width="300" Background="#FFB6BBB0" Height="50" Margin="50,357,50,93" BorderBrush="{x:Null}" Cursor="IBeam" SelectionBrush="#FFFEE895" 
+                         />
+                <Button x:Name="SigninButton" Content="Sign in" Width="100" Height="54" BorderBrush="{x:Null}" Foreground="#FF4A3C2B" FontSize="22" FontFamily="Malgun Gothic" FontWeight="Bold" Margin="30,446,170,0" Background="#FFFEE99A" Cursor="Hand"/>
+                <Button x:Name="RegisterButton" Content="Register" Width="100" Height="54" BorderBrush="{x:Null}" Background="#FFFEE99A" Foreground="#FF4A3C2B" FontSize="22" FontFamily="Malgun Gothic" FontWeight="Bold" Margin="200,446,100,0" Cursor="Hand"/>
             </Grid>
-            <Grid x:Name="SubGridAccountTrue" Margin="302,32,76,31" Width="400" Height="500" d:IsHidden="True">
+            <Grid x:Name="SubGridAccountTrue" Margin="272,32,76,30" Width="400" Height="500" Grid.Column="1" d:IsHidden="True" Visibility="Hidden">
                 <Label x:Name="WecomeCaption" Content="Welcome," Width="300" Height="50" Margin="0,80,0,370" FontFamily="Malgun Gothic Semilight" FontSize="36" FontWeight="SemiBold" FontStretch="Normal" HorizontalContentAlignment="Center"/>
                 <Label x:Name="UsernameCaption" Content="username" Width="300" Height="50" Margin="50,162,50,288" FontFamily="Malgun Gothic Semilight" FontSize="36" FontWeight="SemiBold" FontStretch="Normal" HorizontalContentAlignment="Center"/>
-                <Button x:Name="SignOutButton" Content="Sign out" Width="100" Height="54" BorderBrush="{x:Null}" Foreground="#FF4A3C2B" FontSize="22" FontFamily="Malgun Gothic" FontWeight="Bold" Margin="150,330,150,116" Background="#FFFEE99A"/>
+                <Button x:Name="SignOutButton" Content="Sign out" Width="100" Height="54" BorderBrush="{x:Null}" Foreground="#FF4A3C2B" FontSize="22" FontFamily="Malgun Gothic" FontWeight="Bold" Margin="150,330,150,116" Background="#FFFEE99A" Cursor="Hand"/>
             </Grid>
-            <Grid x:Name="SubGridHistoryFalse" Margin="302,32,76,30" Width="400" Height="500">
+            <Grid x:Name="SubGridHistoryFalse" Margin="272,32,76,30" Width="400" Height="500" Grid.Column="1" d:IsHidden="True" Visibility="Hidden">
                 <Label x:Name="RequiredCaption" Content="Sign in to view user&#xD;&#xA;          history." Margin="0,193,10,194" FontFamily="Malgun Gothic Semilight" FontSize="36" FontWeight="SemiBold" FontStretch="Normal" HorizontalContentAlignment="Center" UseLayoutRounding="True" VerticalContentAlignment="Stretch"/>
             </Grid>
-            <Grid x:Name="SubGridHistoryTrue" Margin="302,32,76,31" Width="400" Height="500" d:IsHidden="True">
+            <Grid x:Name="SubGridHistoryTrue" Margin="272,32,76,30" Width="400" Height="500" Grid.Column="1" d:IsHidden="True" Visibility="Hidden">
                 <DataGrid x:Name="HistoryDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Background="{x:Null}" IsSynchronizedWithCurrentItem="True" FrozenColumnCount="3" MinColumnWidth="100" FontFamily="Malgun Gothic Semilight" FontSize="22" FontWeight="Bold" HorizontalScrollBarVisibility="Disabled">
                     <DataGrid.Columns>
                         <DataGridCheckBoxColumn Header="Ticket ID" CanUserResize="False" CanUserReorder="False" IsReadOnly="True"/>

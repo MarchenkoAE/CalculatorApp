@@ -10,6 +10,7 @@
   <ItemGroup>
     <None Remove="DTL800x240.jpg" />
     <None Remove="Ennio_artwork_800x240.jpg" />
+    <None Remove="picture.ico" />
     <None Remove="sct-logo.jpg" />
     <None Remove="TheVelvetQueen_800x240.jpg" />
     <None Remove="Triangle of Sadness -800x240.jpg" />
@@ -22,6 +23,7 @@
   <ItemGroup>
     <Resource Include="DTL800x240.jpg" />
     <Resource Include="Ennio_artwork_800x240.jpg" />
+    <Resource Include="picture.ico" />
     <Resource Include="sct-logo.jpg" />
     <Resource Include="TheVelvetQueen_800x240.jpg" />
     <Resource Include="Triangle of Sadness -800x240.jpg" />
